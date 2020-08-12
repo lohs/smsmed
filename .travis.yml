@@ -16,8 +16,8 @@ services:
     - docker
 
 before_install:
-    #-t cicd tags image; use instead of image id
+    #-t test tags image; use instead of image id
     - docker build -t test -f ./Dockerfile.dev .
 
 script:
-    - docker run -e CI=true test npm run start
+    - docker-compose up
