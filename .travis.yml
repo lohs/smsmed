@@ -1,5 +1,6 @@
-language: generic
-sudo: required
+language: node_js
+node_js:
+    node
 # env:
 #     - RDS_HOSTNAME: $RDS_HOSTNAME
 #     - RDS_USERNAME: $RDS_USERNAME
