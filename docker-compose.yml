@@ -1,0 +1,14 @@
+version: "3"
+services:
+    sms:
+        environment:
+            - RDS_HOSTNAME=${RDS_HOSTNAME}
+            - RDS_USERNAME=${RDS_USERNAME}
+            - RDS_PASSWORD=${RDS_PASSWORD}
+            - RDS_DB_NAME=${RDS_DB_NAME}
+            - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
+            - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
+            - APPLICATION_ID=${APPLICATION_ID}
+            - ORIGINATION_NUMBER=${ORIGINATION_NUMBER}
+        build: .
+        
