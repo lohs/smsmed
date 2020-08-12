@@ -1,5 +1,5 @@
 # mskmed
-[![Build Status](https://travis-ci.org/lohs/mskmed.svg?branch=master)](https://travis-ci.org/lohs/mskmed)
+[![Build Status](https://travis-ci.org/lohs/smsmed.svg?branch=master)](https://travis-ci.org/lohs/smsmed)
 
 Create DB Instance <br>
 Enable VPC attributes DNS hostnames and DNS resolution (only resolution was enabled when created)<br>
