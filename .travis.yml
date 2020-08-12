@@ -1,23 +1,11 @@
 language: node_js
-node_js:
-    node
-# env:
-#     - RDS_HOSTNAME: $RDS_HOSTNAME
-#     - RDS_USERNAME: $RDS_USERNAME
-#     - RDS_PASSWORD: $RDS_PASSWORD
-#     - RDS_DB_NAME: $RDS_DB_NAME
-#     - AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
-#     - AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
-#     - APPLICATION_ID: $APPLICATION_ID
-#     - ORIGINATION_NUMBER: $ORIGINATION_NUMBER
-    
+node_js: node
 services:
-    #tell TravisCI to install docker
-    - docker
-
+- docker
 before_install:
-    #-t test tags image; use instead of image id
-    - docker build -t test -f ./Dockerfile.dev .
-
+- docker build -t test -f ./Dockerfile.dev .
 script:
-    - docker-compose up
+- docker-compose up
+dd:
+- openssl aes-256-cbc -K $encrypted_3c84dcdc6bbe_key -iv $encrypted_3c84dcdc6bbe_iv
+  -in .env.enc -out .env -d
