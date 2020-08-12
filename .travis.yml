@@ -19,5 +19,4 @@ before_install:
     - docker build -t test -f ./Dockerfile.dev .
 
 script:
-    - export RDS_HOSTNAME: $RDS_HOSTNAME
     - docker run -e CI=true test npm run start
